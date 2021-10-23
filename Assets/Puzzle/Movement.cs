@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(Input.touchCount > 0){
             Touch t = Input.GetTouch(0);
