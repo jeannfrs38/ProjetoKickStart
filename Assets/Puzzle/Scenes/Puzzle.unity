@@ -563,7 +563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelStarted: {fileID: 0}
   gameStarted: 0
-  secondStart: 0.5
 --- !u!1 &1072386354
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,7 +659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b647672e104b9955bc9ac30918904aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
+  cube: {fileID: 1974320215}
 --- !u!1 &1162197104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8faea1812c89c96aa6eac947e47608d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacao: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &1974320217
 Rigidbody:
   m_ObjectHideFlags: 0
