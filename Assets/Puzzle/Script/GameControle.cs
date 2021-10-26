@@ -7,7 +7,7 @@ public class GameControle : MonoBehaviour
 {
     public Image panelStarted;
     public bool gameStarted;
-    public float secondStart;
+    private float secondStart;
 
     
 
