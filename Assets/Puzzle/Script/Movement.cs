@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
                     Vector3 rot = new Vector3(valueTy, 0.0f, valueTz * -1 );
                     Debug.Log(rotacao.y);
                  
-                    transform.Rotate( rot * 2 * Time.deltaTime, Space.World);
+                    transform.Rotate( rot * 5 * Time.deltaTime, Space.World);
                     
                     
 
