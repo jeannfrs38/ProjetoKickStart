@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     public Image boo3;
     public Image boo4;
     public Image boo5;
+    public AudioClip SomDeDerrota;
     void Start()
     {
         vidaAtual = vidaMaxima;
@@ -50,9 +51,13 @@ public class Health : MonoBehaviour
             boo3.gameObject.SetActive(false);
             boo2.gameObject.SetActive(false);
             boo1.gameObject.SetActive(false);
+            ControlaAudio.instancia.PlayOneShot(SomDeDerrota);
         }
     }
-     
+     public void ReceberVida()
+    {
+        vidaAtual ++;
+    }
     
     
 }

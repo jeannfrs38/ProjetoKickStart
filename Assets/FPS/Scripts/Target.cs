@@ -20,12 +20,12 @@ public class Target : MonoBehaviour
     }
 
    
-    private void OnTriggerEnter(Collider other){
+    private void OnCollisionEnter(Collision other){
         if (other.gameObject.tag == "Player")
         {
             
             ren.materials = new Material[] { hitMaterial };
-            
+            scriptHealth.ReceberVida();
             
         }
         
@@ -36,6 +36,7 @@ public class Target : MonoBehaviour
         onExit.Invoke();
         Destroy(gameObject);
         scriptHealth.ReceberDano();
+        
         
     }
 }
