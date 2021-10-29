@@ -35,7 +35,7 @@ public class Target : MonoBehaviour
         yield return new WaitForSeconds(exitTime);
         onExit.Invoke();
         Destroy(gameObject);
-        scriptHealth.ReceberDano();
+         scriptHealth.ReceberDano();
         
         
     }

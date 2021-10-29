@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class Health : MonoBehaviour
     public Image boo3;
     public Image boo4;
     public Image boo5;
+    public GameObject PainelGameOver;
     public AudioClip SomDeDerrota;
     void Start()
     {
         vidaAtual = vidaMaxima;
+        PainelGameOver.SetActive(false);
     }
 
     public void ReceberDano()
@@ -51,7 +54,8 @@ public class Health : MonoBehaviour
             boo3.gameObject.SetActive(false);
             boo2.gameObject.SetActive(false);
             boo1.gameObject.SetActive(false);
-            ControlaAudio.instancia.PlayOneShot(SomDeDerrota);
+            PainelGameOver.gameObject.SetActive(true);
+             ControlaAudio.instancia.PlayOneShot(SomDeDerrota);
         }
     }
      public void ReceberVida()
@@ -59,5 +63,9 @@ public class Health : MonoBehaviour
         vidaAtual ++;
     }
     
-    
+    public void Reiniciar ()
+    {
+        SceneManager.LoadScene("FPS");
+        
+    }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4233439478449792638}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,6 @@ MonoBehaviour:
       m_Calls: []
   exitTime: 1.5
   hitMaterial: {fileID: 2100000, guid: e285317fa913a6349aa89712699695e4, type: 2}
-  scriptHealth: {fileID: 0}
 --- !u!64 &4233439478449792638
 MeshCollider:
   m_ObjectHideFlags: 0
