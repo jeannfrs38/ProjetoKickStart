@@ -15,8 +15,9 @@ public class Boo : MonoBehaviour
 
     void OnCollisionEnter(Collision other) {
         rb.useGravity = true;
+        
     }
-
+    
     void OnBecameInvisible()
     {
         Destroy(gameObject);

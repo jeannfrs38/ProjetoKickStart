@@ -28,4 +28,6 @@ public class BooSpawner : MonoBehaviour
         Boo boo = Instantiate(booPrefab).GetComponent<Boo>();
         boo.firePosition = (position - transform.position).normalized * 30;
     }
+   
+   
 }
