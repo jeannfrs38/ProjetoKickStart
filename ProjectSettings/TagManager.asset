@@ -4,7 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Coins
+=======
+  - Target
+  - Wall
+>>>>>>> 33cda0a153bc01381cf6667b6fce46eabcfcb46e
   layers:
   - Default
   - TransparentFX
