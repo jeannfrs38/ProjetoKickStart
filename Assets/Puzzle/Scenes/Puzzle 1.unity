@@ -524,7 +524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cc8beeeff947143b84c1ab85f332f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCenas: []
 --- !u!114 &624163170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,7 +750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8cc8beeeff947143b84c1ab85f332f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCenas: []
 --- !u!114 &644969320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2201,7 +2199,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1080, y: 1920}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0.44
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
