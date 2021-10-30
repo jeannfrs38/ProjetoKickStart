@@ -374,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &298254755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -720,8 +720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -770}
-  m_SizeDelta: {x: 671.9702, y: 570.9052}
+  m_AnchoredPosition: {x: 0, y: 181.24988}
+  m_SizeDelta: {x: 869.7554, y: 738.9433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &705849472
 MonoBehaviour:
@@ -997,9 +997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Minigames
-
-'
+  m_Text: Arcade
 --- !u!222 &1057610476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1088,7 +1086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1217569876
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1230,6 +1228,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1153870643}
     m_Modifications:
+    - target: {fileID: 1894869501803812469, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894869501803812469, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894869501803812469, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894869501803812469, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894869501803812469, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1894869502553251861, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
       propertyPath: m_Name
       value: Coins
@@ -1300,7 +1318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894869502553251862, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1894869502553251862, guid: e1e25c0610c2568cb86d03db5ca50c2a, type: 3}
       propertyPath: m_AnchoredPosition.y
