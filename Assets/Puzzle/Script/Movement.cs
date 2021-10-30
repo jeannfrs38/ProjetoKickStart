@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
                     }if(valueTy >= valueMax){
                         valueTy = valueMax;
                     }
-                    Vector3 rot = new Vector3(valueTy, 0.0f, valueTz * -1 );
+                    Vector3 rot = new Vector3(valueTy, 0.0f, valueTz );
                     
                  
                     transform.Rotate( rot * 5 * Time.deltaTime, Space.World);
