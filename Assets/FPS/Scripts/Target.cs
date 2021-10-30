@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
 
     [SerializeField] float exitTime;
     [SerializeField] Material hitMaterial;
-    public Health scriptHealth;
+    private Health scriptHealth;
     Renderer ren;
 
     void Start()
@@ -24,8 +24,9 @@ public class Target : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             
-            ren.materials = new Material[] { hitMaterial };
+            ren.materials[1] =  hitMaterial ;
             scriptHealth.ReceberVida();
+           Destroy(other.gameObject, 0.5f);
             
         }
         

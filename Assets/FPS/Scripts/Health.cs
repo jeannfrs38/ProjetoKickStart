@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         vidaAtual = vidaMaxima;
-        PainelGameOver.SetActive(false);
+       
     }
 
     public void ReceberDano()
