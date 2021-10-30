@@ -3,18 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Coins
-=======
-  - Target
-  - Wall
->>>>>>> 33cda0a153bc01381cf6667b6fce46eabcfcb46e
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - MascaraChao
+  - 
   - Water
   - UI
   - 
