@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class Coins : MonoBehaviour
 {
     
-    public Text textCoins;
-    private int coins;
+    private ObjectCoin _objectoCoins;
+    
+    public  bool colidiu;
     void Start()
     {
-        textCoins.text =  coins.ToString();
+        _objectoCoins = FindObjectOfType(typeof(ObjectCoin))as ObjectCoin;
     }
 
-    // Update is called once per frame
-    void Update()
+     void OnTriggerEnter(Collider other)
     {
-        
-    }
-    public void QtdCoins(int qtdcoins){
+        if(other.gameObject.CompareTag("Player")){
+            _objectoCoins.QtdCoins(10);
+            Destroy(this.gameObject);
 
-        coins += qtdcoins;
-        textCoins.text = coins.ToString();
+            
+        }
     }
 
 

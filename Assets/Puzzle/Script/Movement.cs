@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
                         valueTy = valueMax;
                     }
                     Vector3 rot = new Vector3(valueTy, 0.0f, valueTz * -1 );
-                    Debug.Log(rotacao.y);
+                    
                  
                     transform.Rotate( rot * 5 * Time.deltaTime, Space.World);
                     
@@ -54,6 +54,7 @@ public class Movement : MonoBehaviour
         }
        
     }
+  
 
   
     
