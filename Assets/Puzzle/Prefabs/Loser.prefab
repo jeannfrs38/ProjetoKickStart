@@ -640,8 +640,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1156107171136780407}
         m_TargetAssemblyTypeName: CarregarCena, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 5
+        m_MethodName: ChamarCenaAtual
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -903,11 +903,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8927858182146632782, guid: 8357ee89846deaa34bee316202b07484, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 250
+      value: 265.5045
       objectReference: {fileID: 0}
     - target: {fileID: 8927858182146632782, guid: 8357ee89846deaa34bee316202b07484, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 250
+      value: 464.4328
       objectReference: {fileID: 0}
     - target: {fileID: 8927858182146632782, guid: 8357ee89846deaa34bee316202b07484, type: 3}
       propertyPath: m_LocalPosition.x

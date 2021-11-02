@@ -3,7 +3,7 @@ using UnityEngine;
 public class BooSpawner : MonoBehaviour
 {
     [SerializeField] GameObject booPrefab;
-    public AudioClip SomDeDisparo;
+    
 
     void Update()
     {
@@ -28,7 +28,7 @@ public class BooSpawner : MonoBehaviour
     {
         Boo boo = Instantiate(booPrefab).GetComponent<Boo>();
         boo.firePosition = (position - transform.position).normalized * 30;
-        ControlaAudio.instancia.PlayOneShot(SomDeDisparo);
+        AudioManager.audioManagerInstace.PlayAudioSix(); 
     }
    
    

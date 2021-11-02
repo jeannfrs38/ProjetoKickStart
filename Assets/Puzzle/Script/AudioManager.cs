@@ -11,13 +11,13 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioThree;
     public AudioSource audioFour;
     public AudioSource audioFive;
+    public AudioSource audioSix;
+    public AudioSource audioSeven;
 
 
     public float fadeTime;
-    public Slider sliderMusica;
-    public Slider sliderEfeito;
     public float volume;
-    public float volumeEf;
+
     void Awake()
     {
         if (audioManagerInstace == null)
@@ -37,13 +37,21 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(volume);
+        
     }
 
     public void PlayAudioOne()
     {
-
+        if (audioTwo.isPlaying == false )
+        {
+            
             audioOne.Play();
+          
+            
+            StartCoroutine(FadeIn(audioOne, fadeTime, volume));
+
+        }
+            
            
  
         
@@ -51,9 +59,16 @@ public class AudioManager : MonoBehaviour
     public void PlayAudioThree()
     {
 
+       
+        if (audioThree.isPlaying == false )
+        {
+            
             audioThree.Play();
-           
+            
+            
+            StartCoroutine(FadeIn(audioThree, fadeTime, volume));
 
+        }
     }
     public void PlayAudioFour()
     {
@@ -67,8 +82,22 @@ public class AudioManager : MonoBehaviour
 
         audioFive.Play();
 
+     }
+    public void PlayAudioSix()
+    {
+
+        audioSix.Play();
+
 
     }
+     public void PlayAudioSeven()
+    {
+
+        audioSeven.Play();
+
+
+    }
+    
 
     public void PlayAudioTwo()
     {
@@ -77,17 +106,17 @@ public class AudioManager : MonoBehaviour
         {
             
             audioTwo.Play();
-            audioTwo.volume = 0;
+            
             
             StartCoroutine(FadeIn(audioTwo, fadeTime, volume));
 
         }
 
     }
-    public void StopMusica()
+    public void StopMusica(AudioSource audioSoucer)
     {
-        StartCoroutine(FadeOut(audioTwo, fadeTime));
-        volume = audioTwo.volume;
+        StartCoroutine(FadeOut(audioSoucer, fadeTime));
+        volume = audioSoucer.volume;
     }
 
 
