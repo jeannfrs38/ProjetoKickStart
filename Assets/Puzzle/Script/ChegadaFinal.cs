@@ -30,7 +30,7 @@ public class ChegadaFinal : MonoBehaviour
      IEnumerator ChamarFinal(float seconds){
         yield return new WaitForSeconds(seconds);
             MenuWin.SetActive(true);
-            _chegada.colidiuChegada = false;
+            
         
     }
 }

@@ -204,6 +204,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1747117313}
     m_Modifications:
+    - target: {fileID: 1487912836937943462, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487912836937943462, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChamarCenaAtual
+      objectReference: {fileID: 0}
     - target: {fileID: 1487912838496394294, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -304,6 +312,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 464.4328
       objectReference: {fileID: 0}
+    - target: {fileID: 8678439979828539709, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 386
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
 --- !u!224 &345418255 stripped
@@ -311,17 +323,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1487912838496394294, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
   m_PrefabInstance: {fileID: 345418254}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &345589080 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8289591168550789105, guid: fe24549c5a36eb7e19c81b2b8c5ff8b5, type: 3}
-  m_PrefabInstance: {fileID: 1394540552}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &420499593 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8289591167599151359, guid: fe24549c5a36eb7e19c81b2b8c5ff8b5, type: 3}
@@ -492,6 +493,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelStarted: {fileID: 0}
   gameStarted: 0
+--- !u!114 &915468815 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1487912838561276306, guid: edec623856b67ef24bfaad5d733a56d1, type: 3}
+  m_PrefabInstance: {fileID: 345418254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &933235362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,6 +584,10 @@ PrefabInstance:
       propertyPath: MenuWin
       value: 
       objectReference: {fileID: 729769789}
+    - target: {fileID: 913169405110678777, guid: 6035c76bc3c6675a6a9f7e4f5b3472cb, type: 3}
+      propertyPath: colidiuChegada
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1141030342278733538, guid: 6035c76bc3c6675a6a9f7e4f5b3472cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.4406211
@@ -1345,7 +1361,7 @@ PrefabInstance:
     - target: {fileID: 124463428655103298, guid: 7be9cbf80c208a313838f6843ba813f5, type: 3}
       propertyPath: textCoins
       value: 
-      objectReference: {fileID: 345589080}
+      objectReference: {fileID: 915468815}
     - target: {fileID: 124463428655103298, guid: 7be9cbf80c208a313838f6843ba813f5, type: 3}
       propertyPath: loserImage
       value: 

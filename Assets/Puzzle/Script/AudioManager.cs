@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudioOne()
     {
-        if (audioTwo.isPlaying == false )
+        if (audioOne.isPlaying == false )
         {
             
             audioOne.Play();

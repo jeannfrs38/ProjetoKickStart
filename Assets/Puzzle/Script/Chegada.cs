@@ -28,7 +28,7 @@ public class Chegada : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player")){
-            
+            colidiuChegada = true;
             AudioManager.audioManagerInstace.PlayAudioFive();
             
             if(cenaCarregada.buildIndex == 2 ){
