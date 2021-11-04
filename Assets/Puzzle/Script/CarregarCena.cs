@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class CarregarCena : MonoBehaviour
 {
     private Scene cenaCarregada;
-
+    
+    private void Start() {
+        
+    }
     private void Update() {
         cenaCarregada = SceneManager.GetActiveScene();
-        
+             
     }
     public void ChamarCenaAtual(){
         string cena;
+         
           if(cenaCarregada.buildIndex == 2 ){
                 cena = "Puzzle";
                 Load(cena);
@@ -32,7 +36,7 @@ public class CarregarCena : MonoBehaviour
     }
       public void Load(string scene)
     {
-         
+        
         AudioManager.audioManagerInstace.PlayAudioFour();
         SceneManager.LoadScene(scene);
         if(Time.timeScale == 0){

@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 
     private GameControle _gameControle;
      public Quaternion rotacao;
+     
     void Start()
     {
         _gameControle = FindObjectOfType(typeof(GameControle)) as GameControle;
@@ -40,7 +41,7 @@ public class Movement : MonoBehaviour
                     }if(valueTy >= valueMax){
                         valueTy = valueMax;
                     }
-                    Vector3 rot = new Vector3(valueTy * -1, 0.0f, valueTz);
+                    Vector3 rot = new Vector3(valueTy , 0.0f, valueTz * -1);
                     
                  
                     transform.Rotate( rot * 5 * Time.deltaTime, Space.World);

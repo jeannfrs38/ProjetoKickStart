@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    private static UIController instance;
+    public static UIController instance;
     public Text textTotalCoins;
     private int totalCoins;
 
