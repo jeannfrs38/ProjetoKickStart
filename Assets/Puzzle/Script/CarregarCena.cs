@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class CarregarCena : MonoBehaviour
 {
     private Scene cenaCarregada;
-    
+    private Chegada _chegada;
     private void Start() {
         
     }
     private void Update() {
         cenaCarregada = SceneManager.GetActiveScene();
-             
+             _chegada = FindObjectOfType(typeof(Chegada))as Chegada;
     }
     public void ChamarCenaAtual(){
         string cena;
@@ -29,6 +29,11 @@ public class CarregarCena : MonoBehaviour
             }else if(cenaCarregada.buildIndex == 6){
                
                 cena ="Puzzle 3";
+                Load(cena);
+            }
+            else if(cenaCarregada.buildIndex == 6 && _chegada.colidiuChegada == true){
+               
+                cena ="Menu";
                 Load(cena);
             }
 

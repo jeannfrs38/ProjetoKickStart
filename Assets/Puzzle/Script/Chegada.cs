@@ -14,14 +14,14 @@ public class Chegada : MonoBehaviour
     public Scene cenaCarregada;
    
    private ObjectCoin _objectCoin;
+   
 
    private void Start() {
        
        _gameControle = FindObjectOfType(typeof(GameControle)) as GameControle;
        _carregarCena = FindObjectOfType(typeof(CarregarCena))as CarregarCena ;
        _objectCoin = FindObjectOfType(typeof(ObjectCoin))as ObjectCoin;
-
-   }
+    }   
    private void Update() {
         cenaCarregada = SceneManager.GetActiveScene();
         
@@ -32,7 +32,7 @@ public class Chegada : MonoBehaviour
         if(other.gameObject.CompareTag("Player")){
             colidiuChegada = true;
             _gameControle.gameStarted = false;
-            _objectCoin.CoinsUpdate(_objectCoin.coins);
+           _objectCoin.CoinsUpdate(_objectCoin.coins);
             AudioManager.audioManagerInstace.PlayAudioFive();
             
             if(cenaCarregada.buildIndex == 2 ){
@@ -42,7 +42,6 @@ public class Chegada : MonoBehaviour
             }else if(cenaCarregada.buildIndex == 5){
                 StartCoroutine(ChamarFase(10f , 6));
             }
-            
 
         }
     }

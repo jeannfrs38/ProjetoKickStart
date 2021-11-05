@@ -15,6 +15,8 @@ public class ObjectCoin : MonoBehaviour
     private Coins _coins;
     public  GameObject loserImage;
 
+    
+
     void Start()
     {
             
@@ -23,7 +25,10 @@ public class ObjectCoin : MonoBehaviour
             textCoins.text = coins.ToString();
             textCoinsLoser.text = coins.ToString();
             textCoinsTotal.text = coins.ToString();
-            totalCoins =  PlayerPrefs.GetInt("totalcoins", totalCoins);
+            
+            totalCoins = PlayerPrefs.GetInt("totalcoins",totalCoins);
+        
+            textCoinsTotal.text = totalCoins.ToString();
     }
 
     private void Update() {
@@ -62,16 +67,15 @@ public class ObjectCoin : MonoBehaviour
             CoinsUpdate(coins);
     }
 
-     public void CoinsUpdate(int coins){
-         if(coins < totalCoins){
-             totalCoins += coins;
-        
-            textCoinsTotal.text = totalCoins.ToString();
-            PlayerPrefs.SetInt("totalcoins", totalCoins);
-            
-         }
-        
+      public void CoinsUpdate(int coins){
 
+        if(coins < totalCoins){
+        totalCoins += coins;
+        
+        textCoinsTotal.text = totalCoins.ToString();
+        PlayerPrefs.SetInt("totalcoins", totalCoins);
+
+        }
     }
 
 

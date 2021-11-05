@@ -8,29 +8,28 @@ public class UIController : MonoBehaviour
     public static UIController instance;
     public Text textTotalCoins;
     private int totalCoins;
+ 
+     private ObjectCoin _objectoCoin;
 
     void Start()
     {   
-        if(instance == null){
-            instance = this;
-             DontDestroyOnLoad(this.gameObject);
-        }else{
-           Destroy(gameObject);
-        }
+        
 
-        totalCoins =  PlayerPrefs.GetInt("totalcoins" , 0);
+        _objectoCoin =  FindObjectOfType(typeof(ObjectCoin)) as ObjectCoin;
+
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void CoinsUpdate(int coins){
 
-        if(coins > 0){
+        if(coins < totalCoins){
         totalCoins += coins;
         
         textTotalCoins.text = totalCoins.ToString();

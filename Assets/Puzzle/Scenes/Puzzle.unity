@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eeecf24732d189cb932ab018c2dc9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coins: 0
   textCoins: {fileID: 228299057}
   textCoinsLoser: {fileID: 1156107172019433791}
   textCoinsTotal: {fileID: 914184150}
@@ -442,9 +443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072386357}
   - component: {fileID: 1072386356}
-  - component: {fileID: 1072386358}
   - component: {fileID: 1072386355}
-  - component: {fileID: 1072386359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -517,33 +516,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
---- !u!114 &1072386358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072386354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b647672e104b9955bc9ac30918904aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cube: {fileID: 0}
---- !u!114 &1072386359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072386354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5751d992c207d837d834979f43568147, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textTotal: {fileID: 0}
-  totalCoins: 0
 --- !u!1001 &1125265081
 PrefabInstance:
   m_ObjectHideFlags: 0
