@@ -19,9 +19,9 @@ public class GameControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.touchCount == 1){
-           StartCoroutine(GameStarted(secondStart));
-        }
+        //if(Input.touchCount == 1){
+           //StartCoroutine(GameStarted(secondStart));
+        //}
     }
 
 
@@ -29,5 +29,9 @@ public class GameControle : MonoBehaviour
         yield return new WaitForSeconds (seconds);
         gameStarted = true;
         Destroy(gameObject);
+    }
+
+    private void OnMouseDown() {
+        StartCoroutine(GameStarted(secondStart));
     }
 }
