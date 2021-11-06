@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class ControlaAudio : MonoBehaviour
 {
-    private AudioSource MeuAudioSource;
-    public static AudioSource instancia;
+    public static AudioSource audioSource;
 
     void Start()
     {
-        MeuAudioSource = GetComponent<AudioSource>();
-        instancia = MeuAudioSource;
+        audioSource = GetComponent<AudioSource>();
     }
 }

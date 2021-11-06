@@ -11,7 +11,7 @@ public class BooSpawner : MonoBehaviour
 
     void CheckClick()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !RoundManager.gameOver)
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

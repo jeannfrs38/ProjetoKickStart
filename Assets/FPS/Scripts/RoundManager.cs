@@ -9,6 +9,9 @@ public class RoundManager : MonoBehaviour
     [SerializeField] int targetsPerRound;
     [SerializeField] float delayBetweenRounds;
 
+    [HideInInspector]
+    public static bool gameOver = false;
+
     int round = 0;
 
     void Start()
@@ -19,6 +22,8 @@ public class RoundManager : MonoBehaviour
 
     IEnumerator WaitForNextRound()
     {
+        if (gameOver) yield return 0;
+
         round++;
         roundText.text = $"ROUND {round}";
         yield return new WaitForSeconds(delayBetweenRounds);
@@ -29,5 +34,4 @@ public class RoundManager : MonoBehaviour
     {
         targetManager.SpawnTargets(targetsPerRound);
     }
-
 }

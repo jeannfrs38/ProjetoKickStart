@@ -54,7 +54,9 @@ public class Health : MonoBehaviour
             boo2.gameObject.SetActive(false);
             boo1.gameObject.SetActive(false);
             PainelGameOver.gameObject.SetActive(true);
-            ControlaAudio.instancia.PlayOneShot(SomDeDerrota);
+            ControlaAudio.audioSource.clip = SomDeDerrota;
+            ControlaAudio.audioSource.Play();
+            RoundManager.gameOver = true;
         }
     }
 
