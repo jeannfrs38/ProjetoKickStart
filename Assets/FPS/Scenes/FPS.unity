@@ -708,11 +708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1080, y: 1920}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1907,7 +1907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850fa09b783e06b4086ac94db71c6c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnArea: {x: 3.5, y: 7}
+  spawnArea: {x: 3, y: 4.2}
   spawnSpeed: 1.5
   targetPrefab: {fileID: 8603302898655294438, guid: e583446b9353447a6a7ee63a3f7d9665, type: 3}
   onSpawnComplete:

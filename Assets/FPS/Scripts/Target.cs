@@ -15,29 +15,28 @@ public class Target : MonoBehaviour
     void Start()
     {
         ren = GetComponent<Renderer>();
-         scriptHealth = GameObject.FindObjectOfType(typeof(Health)) as Health;
+        scriptHealth = GameObject.FindObjectOfType(typeof(Health)) as Health;
         StartCoroutine("TargetExit");
     }
 
-   
-    private void OnCollisionEnter(Collision other){
+    private void OnCollisionEnter(Collision other)
+    {
         if (other.gameObject.tag == "Player")
         {
-            
-            ren.materials[1] =  hitMaterial ;
+            ren.materials[1] = hitMaterial;
             scriptHealth.ReceberVida();
-           Destroy(other.gameObject, 0.5f);
-            
+            Destroy(other.gameObject, 0.5f);
+
         }
-        
+
     }
+
     IEnumerator TargetExit()
     {
         yield return new WaitForSeconds(exitTime);
         onExit.Invoke();
         Destroy(gameObject);
-         scriptHealth.ReceberDano();
-        
-        
+        scriptHealth.ReceberDano();
+
     }
 }
