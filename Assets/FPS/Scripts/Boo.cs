@@ -13,11 +13,11 @@ public class Boo : MonoBehaviour
         rb.velocity = firePosition;
     }
 
-    void OnCollisionEnter(Collision other) {
+    void OnCollisionEnter(Collision other)
+    {
         rb.useGravity = true;
-        
     }
-    
+
     void OnBecameInvisible()
     {
         Destroy(gameObject);
