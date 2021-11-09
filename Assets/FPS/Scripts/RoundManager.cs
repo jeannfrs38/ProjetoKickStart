@@ -10,12 +10,13 @@ public class RoundManager : MonoBehaviour
     [SerializeField] float delayBetweenRounds;
 
     [HideInInspector]
-    public static bool gameOver = false;
+    public static bool gameOver;
 
     int round = 0;
 
     void Start()
     {
+        gameOver = false;
         targetManager.onSpawnComplete.AddListener(() => StartCoroutine("WaitForNextRound"));
         StartCoroutine("WaitForNextRound");
     }

@@ -26,7 +26,6 @@ public class Target : MonoBehaviour
             ren.materials[1] = hitMaterial;
             scriptHealth.ReceberVida();
             Destroy(other.gameObject, 0.5f);
-
         }
 
     }
