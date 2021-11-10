@@ -29,7 +29,7 @@ public class TargetManager : MonoBehaviour
         targetsOnScreen = targets;
         int spawnedTargets = 0;
 
-        while (spawnedTargets < targets)
+        while (spawnedTargets < targets && !RoundManager.gameOver)
         {
             GameObject target = Instantiate(targetPrefab, RandomPosition(), targetPrefab.transform.rotation, transform);
             target.GetComponent<Target>().onExit.AddListener(() =>

@@ -31,6 +31,8 @@ public class RoundManager : MonoBehaviour
     }
     IEnumerator WaitForNextRound()
     {
+        if (gameOver) yield return 0;
+
         round++;
         roundText.text = $"ROUND: {round}";
         roundTextGameOver.text = roundText.text;
