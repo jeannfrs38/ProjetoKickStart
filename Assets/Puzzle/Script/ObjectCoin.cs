@@ -51,11 +51,7 @@ public class ObjectCoin : MonoBehaviour
         coins += qtdcoins;
         textCoins.text = coins.ToString();
         textCoinsLoser.text = textCoins.text;
-        
-    
-        
 
-        
     }
      
 
@@ -70,10 +66,10 @@ public class ObjectCoin : MonoBehaviour
       public void CoinsUpdate(int coins){
 
         if(coins < totalCoins){
-        totalCoins += coins;
+            totalCoins += coins;
         
-        textCoinsTotal.text = totalCoins.ToString();
-        PlayerPrefs.SetInt("totalcoins", totalCoins);
+            textCoinsTotal.text = totalCoins.ToString();
+            PlayerPrefs.SetInt("totalcoins", totalCoins);
 
         }
     }

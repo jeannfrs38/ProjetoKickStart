@@ -3,10 +3,22 @@ using UnityEngine;
 public class BooSpawner : MonoBehaviour
 {
     [SerializeField] GameObject booPrefab;
-
+    public int pontuacao;
+    [SerializeField] Boo _boo;
+    public bool colidiu;
+private void Start() {
+    _boo = FindObjectOfType(typeof(Boo))as Boo;
+    _boo = booPrefab.GetComponent<Boo>();
+}
     void Update()
     {
         CheckClick();
+        if(_boo.colidiuAlvo == true){
+            Pontuacao(10);
+            colidiu = _boo.colidiuAlvo;
+            
+            
+        }
     }
 
     void CheckClick()
@@ -28,5 +40,10 @@ public class BooSpawner : MonoBehaviour
         Boo boo = Instantiate(booPrefab).GetComponent<Boo>();
         boo.firePosition = (position - transform.position).normalized * 30;
         AudioManager.audioManagerInstace.PlayAudioSix();
+    }
+
+    public void Pontuacao(int qtdpntos){
+        pontuacao += qtdpntos;
+        
     }
 }
