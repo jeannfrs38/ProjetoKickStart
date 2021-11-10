@@ -970,13 +970,8 @@ RectTransform:
   - {fileID: 2115894994}
   - {fileID: 316799193}
   - {fileID: 718895849}
-<<<<<<< HEAD
   m_Father: {fileID: 866306820}
   m_RootOrder: 2
-=======
-  m_Father: {fileID: 465893984}
-  m_RootOrder: 1
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.47314805, y: 0.06935418}
@@ -1112,14 +1107,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-<<<<<<< HEAD
   - {fileID: 1949818165}
   - {fileID: 1663639035}
   - {fileID: 727684939}
-=======
-  - {fileID: 465893984}
-  - {fileID: 1949818165}
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1274,11 +1264,7 @@ MonoBehaviour:
   scoreText: {fileID: 336563996}
   targetsPerRound: 3
   delayBetweenRounds: 1
-<<<<<<< HEAD
   _booSpawner: {fileID: 0}
-=======
-  gameOver: 0
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
 --- !u!1001 &1051367413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,11 +1278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733779919909142374, guid: 9706ee188ffb4ed449a68a28aac1d438, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
       value: 9
-=======
-      value: 8
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
       objectReference: {fileID: 0}
     - target: {fileID: 4733779919909142374, guid: 9706ee188ffb4ed449a68a28aac1d438, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1681,13 +1663,8 @@ RectTransform:
   m_LocalScale: {x: 10.904381, y: 10.904381, z: 10.904381}
   m_Children:
   - {fileID: 55575498}
-<<<<<<< HEAD
   m_Father: {fileID: 866306820}
   m_RootOrder: 1
-=======
-  m_Father: {fileID: 465893984}
-  m_RootOrder: 0
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1886,11 +1863,7 @@ GameObject:
   - component: {fileID: 1949818167}
   - component: {fileID: 1949818166}
   m_Layer: 5
-<<<<<<< HEAD
   m_Name: GameOver
-=======
-  m_Name: Game Over
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1911,14 +1884,9 @@ RectTransform:
   - {fileID: 600218446}
   - {fileID: 456609876}
   - {fileID: 1383201377}
-<<<<<<< HEAD
   - {fileID: 1575946309}
   m_Father: {fileID: 866306820}
   m_RootOrder: 0
-=======
-  m_Father: {fileID: 866306820}
-  m_RootOrder: 1
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2008,13 +1976,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booPrefab: {fileID: 4821502050558360109, guid: e0aeea6aa0e5baf488a215ee420f6f55, type: 3}
-<<<<<<< HEAD
   pontuacao: 0
   _boo: {fileID: 0}
   colidiu: 0
-=======
-  roundManager: {fileID: 1048961220}
->>>>>>> 5b385fef6a7e00a8fa65abb471b0c8c1ff939b1b
 --- !u!114 &1958957801
 MonoBehaviour:
   m_ObjectHideFlags: 0

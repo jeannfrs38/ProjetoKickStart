@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class RoundManager : MonoBehaviour
 {
+    [HideInInspector]
+    public static bool gameOver;
+
+        
     [SerializeField] TargetManager targetManager;
     [SerializeField] Text roundText;
     [SerializeField] Text roundTextGameOver;
@@ -19,6 +23,7 @@ public class RoundManager : MonoBehaviour
          _booSpawner = FindObjectOfType(typeof(BooSpawner))as BooSpawner;
         targetManager.onSpawnComplete.AddListener(() => StartCoroutine("WaitForNextRound"));
         StartCoroutine("WaitForNextRound");
+        gameOver = false;
         
         scoreText.text = "Score: ";
         
