@@ -13,12 +13,7 @@ private void Start() {
     void Update()
     {
         CheckClick();
-        if(_boo.colidiuAlvo == true){
-            Pontuacao(10);
-            colidiu = _boo.colidiuAlvo;
-            
-            
-        }
+       
     }
 
     void CheckClick()
@@ -42,8 +37,5 @@ private void Start() {
         AudioManager.audioManagerInstace.PlayAudioSix();
     }
 
-    public void Pontuacao(int qtdpntos){
-        pontuacao += qtdpntos;
-        
-    }
+
 }

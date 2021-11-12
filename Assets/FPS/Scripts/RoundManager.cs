@@ -7,11 +7,11 @@ public class RoundManager : MonoBehaviour
     [HideInInspector]
     public static bool gameOver;
 
-        
+    public GameController _gameController;
     [SerializeField] TargetManager targetManager;
     [SerializeField] Text roundText;
     [SerializeField] Text roundTextGameOver;
-    [SerializeField] Text scoreText;
+    
     [SerializeField] int targetsPerRound;
     [SerializeField] float delayBetweenRounds;
     
@@ -25,13 +25,12 @@ public class RoundManager : MonoBehaviour
         StartCoroutine("WaitForNextRound");
         gameOver = false;
         
-        scoreText.text = "Score: ";
+        
         
     }
     private void Update() {
-        if(_booSpawner.colidiu == true){
-            scoreText.text = _booSpawner.pontuacao.ToString();
-            
+        if(gameOver == true){
+             _gameController.RoundRecord(round);
         }
     }
     IEnumerator WaitForNextRound()
@@ -39,13 +38,9 @@ public class RoundManager : MonoBehaviour
         if (gameOver) yield return 0;
 
         round++;
-        roundText.text = $"ROUND: {round}";
+        roundText.text = $"Round: {round}";
         roundTextGameOver.text = roundText.text;
-
-
-
-
-
+       
         yield return new WaitForSeconds(delayBetweenRounds);
         NextRound();
     }

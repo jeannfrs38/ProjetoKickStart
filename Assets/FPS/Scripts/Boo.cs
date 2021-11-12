@@ -17,7 +17,7 @@ public class Boo : MonoBehaviour
     {
         rb.useGravity = true;
          if(other.gameObject.CompareTag("Alvo")){
-            colidiuAlvo = true;
+            GameController.AdicionarPontos(10);
             
         }
     }

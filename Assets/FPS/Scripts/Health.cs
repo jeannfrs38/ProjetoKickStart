@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public GameObject PainelGameOver;
     public AudioClip SomDeDerrota;
 
+    public GameController _gamecontroller;
     int vidaMaxima = 5;
 
     void Start()
@@ -55,6 +56,8 @@ public class Health : MonoBehaviour
             boo1.gameObject.SetActive(false);
             PainelGameOver.gameObject.SetActive(true);
             ControlaAudio.audioSource.clip = SomDeDerrota;
+            _gamecontroller.Score();
+            
             ControlaAudio.audioSource.Play();
             RoundManager.gameOver = true;
         }
