@@ -1,28 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Coins : MonoBehaviour
 {
-    
-    private ObjectCoin _objectoCoins;
-    
-    public  bool colidiu;
+    public bool colidiu;
+
+    ObjectCoin _objectoCoins;
+
     void Start()
     {
-        _objectoCoins = FindObjectOfType(typeof(ObjectCoin))as ObjectCoin;
+        _objectoCoins = FindObjectOfType(typeof(ObjectCoin)) as ObjectCoin;
     }
 
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player")){
+        if (other.gameObject.CompareTag("Player"))
+        {
             _objectoCoins.QtdCoins(10);
             Destroy(this.gameObject);
-
-            
         }
     }
-
-
 }

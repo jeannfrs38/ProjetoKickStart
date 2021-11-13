@@ -11,28 +11,29 @@ public class RoundManager : MonoBehaviour
     [SerializeField] TargetManager targetManager;
     [SerializeField] Text roundText;
     [SerializeField] Text roundTextGameOver;
-    
+
     [SerializeField] int targetsPerRound;
     [SerializeField] float delayBetweenRounds;
-    
+
     [SerializeField] BooSpawner _booSpawner;
     int round = 0;
 
     void Start()
     {
-         _booSpawner = FindObjectOfType(typeof(BooSpawner))as BooSpawner;
+        _booSpawner = FindObjectOfType(typeof(BooSpawner)) as BooSpawner;
         targetManager.onSpawnComplete.AddListener(() => StartCoroutine("WaitForNextRound"));
         StartCoroutine("WaitForNextRound");
         gameOver = false;
-        
-        
-        
     }
-    private void Update() {
-        if(gameOver == true){
-             _gameController.RoundRecord(round);
+
+    void Update()
+    {
+        if (gameOver == true)
+        {
+            _gameController.RoundRecord(round);
         }
     }
+
     IEnumerator WaitForNextRound()
     {
         if (gameOver) yield return 0;
@@ -40,7 +41,7 @@ public class RoundManager : MonoBehaviour
         round++;
         roundText.text = $"Round: {round}";
         roundTextGameOver.text = roundText.text;
-       
+
         yield return new WaitForSeconds(delayBetweenRounds);
         NextRound();
     }
@@ -49,5 +50,4 @@ public class RoundManager : MonoBehaviour
     {
         targetManager.SpawnTargets(targetsPerRound);
     }
-   
 }

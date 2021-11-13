@@ -1,10 +1,10 @@
 using UnityEngine;
-using System.Collections;
+
 public class Boo : MonoBehaviour
 {
     [HideInInspector]
     public Vector3 firePosition;
-    public  bool colidiuAlvo;
+    public bool colidiuAlvo;
     Rigidbody rb;
 
     void Start()
@@ -16,9 +16,9 @@ public class Boo : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         rb.useGravity = true;
-         if(other.gameObject.CompareTag("Alvo")){
+        if (other.gameObject.CompareTag("Alvo"))
+        {
             GameController.AdicionarPontos(10);
-            
         }
     }
 
@@ -26,5 +26,4 @@ public class Boo : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }

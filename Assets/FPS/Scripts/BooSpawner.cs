@@ -6,14 +6,17 @@ public class BooSpawner : MonoBehaviour
     public int pontuacao;
     [SerializeField] Boo _boo;
     public bool colidiu;
-private void Start() {
-    _boo = FindObjectOfType(typeof(Boo))as Boo;
-    _boo = booPrefab.GetComponent<Boo>();
-}
+
+    void Start()
+    {
+        _boo = FindObjectOfType(typeof(Boo)) as Boo;
+        _boo = booPrefab.GetComponent<Boo>();
+    }
+
     void Update()
     {
         CheckClick();
-       
+
     }
 
     void CheckClick()
@@ -36,6 +39,4 @@ private void Start() {
         boo.firePosition = (position - transform.position).normalized * 30;
         AudioManager.audioManagerInstace.PlayAudioSix();
     }
-
-
 }

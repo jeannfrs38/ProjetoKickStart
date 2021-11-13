@@ -57,7 +57,6 @@ public class Health : MonoBehaviour
             PainelGameOver.gameObject.SetActive(true);
             ControlaAudio.audioSource.clip = SomDeDerrota;
             _gamecontroller.Score();
-            
             ControlaAudio.audioSource.Play();
             RoundManager.gameOver = true;
         }

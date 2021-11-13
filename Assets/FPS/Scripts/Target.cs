@@ -19,7 +19,7 @@ public class Target : MonoBehaviour
         StartCoroutine("TargetExit");
     }
 
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -27,7 +27,6 @@ public class Target : MonoBehaviour
             scriptHealth.ReceberVida();
             Destroy(other.gameObject, 0.5f);
         }
-
     }
 
     IEnumerator TargetExit()
@@ -36,6 +35,5 @@ public class Target : MonoBehaviour
         onExit.Invoke();
         Destroy(gameObject);
         scriptHealth.ReceberDano();
-
     }
 }

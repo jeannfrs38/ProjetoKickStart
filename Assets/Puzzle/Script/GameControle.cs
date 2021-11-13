@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,29 +8,27 @@ public class GameControle : MonoBehaviour
     public bool gameStarted;
     private float secondStart;
 
-    
-
     void Start()
     {
-        panelStarted = GetComponent<Image>();   
+        panelStarted = GetComponent<Image>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //if(Input.touchCount == 1){
-           //StartCoroutine(GameStarted(secondStart));
+        //StartCoroutine(GameStarted(secondStart));
         //}
     }
 
-
-    IEnumerator GameStarted(float seconds){
-        yield return new WaitForSeconds (seconds);
+    IEnumerator GameStarted(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
         gameStarted = true;
         Destroy(gameObject);
     }
 
-    private void OnMouseDown() {
+    private void OnMouseDown()
+    {
         StartCoroutine(GameStarted(secondStart));
     }
 }
