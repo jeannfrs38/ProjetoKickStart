@@ -15,7 +15,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] int targetsPerRound;
     [SerializeField] float delayBetweenRounds;
 
-    [SerializeField] BooSpawner _booSpawner;
+    BooSpawner _booSpawner;
     int round = 0;
 
     void Start()
@@ -39,8 +39,8 @@ public class RoundManager : MonoBehaviour
         if (gameOver) yield return 0;
 
         round++;
-        roundText.text = $"Round: {round}";
-        roundTextGameOver.text = roundText.text;
+        roundText.text = $"ROUND: {round}";
+        roundTextGameOver.text = round.ToString();
 
         yield return new WaitForSeconds(delayBetweenRounds);
         NextRound();

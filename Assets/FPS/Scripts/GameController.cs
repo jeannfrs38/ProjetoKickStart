@@ -11,33 +11,26 @@ public class GameController : MonoBehaviour
     void Start()
     {
         roundRecord = PlayerPrefs.GetInt("Round", 0);
-        roundRecordText.text = "Round Record: " + roundRecord.ToString();
-    }
-
-    void Update()
-    {
-        Debug.Log(pontuacao);
+        roundRecordText.text = roundRecord.ToString();
     }
 
     public static void AdicionarPontos(int qtdpntos)
     {
         pontuacao += qtdpntos;
-
     }
 
     public void Score()
     {
         scoreText.text = pontuacao.ToString();
-
     }
+
     public void RoundRecord(int round)
     {
         if (roundRecord < round)
         {
             roundRecord = round;
             PlayerPrefs.SetInt("Round", roundRecord);
-            roundRecordText.text = "Round Record: " + roundRecord.ToString();
-
+            roundRecordText.text = roundRecord.ToString();
         }
     }
 }
