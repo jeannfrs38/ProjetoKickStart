@@ -9,7 +9,8 @@ public class Target : MonoBehaviour
 
     [SerializeField] float exitTime;
     [SerializeField] Material hitMaterial;
-    private Health scriptHealth;
+
+    Health scriptHealth;
     Renderer ren;
 
     void Start()

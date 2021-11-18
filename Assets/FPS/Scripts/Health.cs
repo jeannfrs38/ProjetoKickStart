@@ -27,39 +27,44 @@ public class Health : MonoBehaviour
 
         if (vidaAtual == 4)
         {
-            boo5.gameObject.SetActive(false);
+            boo5.enabled = false;
         }
         else if (vidaAtual == 3)
         {
-            boo5.gameObject.SetActive(false);
-            boo4.gameObject.SetActive(false);
+            boo5.enabled = false;
+            boo4.enabled = false;
         }
         else if (vidaAtual == 2)
         {
-            boo5.gameObject.SetActive(false);
-            boo4.gameObject.SetActive(false);
-            boo3.gameObject.SetActive(false);
+            boo5.enabled = false;
+            boo4.enabled = false;
+            boo3.enabled = false;
         }
         else if (vidaAtual == 1)
         {
-            boo5.gameObject.SetActive(false);
-            boo4.gameObject.SetActive(false);
-            boo3.gameObject.SetActive(false);
-            boo2.gameObject.SetActive(false);
+            boo5.enabled = false;
+            boo4.enabled = false;
+            boo3.enabled = false;
+            boo2.enabled = false;
         }
         else if (vidaAtual == 0)
         {
-            boo5.gameObject.SetActive(false);
-            boo4.gameObject.SetActive(false);
-            boo3.gameObject.SetActive(false);
-            boo2.gameObject.SetActive(false);
-            boo1.gameObject.SetActive(false);
-            PainelGameOver.gameObject.SetActive(true);
-            ControlaAudio.audioSource.clip = SomDeDerrota;
-            _gamecontroller.Score();
-            ControlaAudio.audioSource.Play();
-            RoundManager.gameOver = true;
+            boo5.enabled = false;
+            boo4.enabled = false;
+            boo3.enabled = false;
+            boo2.enabled = false;
+            boo1.enabled = false;
+            GameOver();
         }
+    }
+
+    void GameOver()
+    {
+        PainelGameOver.gameObject.SetActive(true);
+        ControlaAudio.audioSource.clip = SomDeDerrota;
+        _gamecontroller.Score();
+        ControlaAudio.audioSource.Play();
+        RoundManager.gameOver = true;
     }
 
     public void ReceberVida()

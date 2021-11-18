@@ -8,11 +8,13 @@ public class TargetManager : MonoBehaviour
     [SerializeField] float spawnSpeed;
     [SerializeField] GameObject targetPrefab;
 
+    [HideInInspector]
+    public UnityEvent onSpawnComplete;
+
     bool gameOver;
     int targetsOnScreen;
     Vector3 targetSize;
 
-    public UnityEvent onSpawnComplete;
 
     void Start()
     {
@@ -46,7 +48,7 @@ public class TargetManager : MonoBehaviour
     {
         Vector3 randomPosition = new Vector3(
             Random.Range(-spawnArea.x, spawnArea.x),
-            Random.Range(-spawnArea.y, spawnArea.y),
+            Random.Range(-spawnArea.y, spawnArea.y) + transform.position.y,
             transform.position.z
         );
         bool hit = Physics.CheckBox(randomPosition, targetSize / 2);
@@ -55,7 +57,7 @@ public class TargetManager : MonoBehaviour
         {
             randomPosition = new Vector3(
                 Random.Range(-spawnArea.x, spawnArea.x),
-                Random.Range(-spawnArea.y, spawnArea.y),
+                Random.Range(-spawnArea.y, spawnArea.y) + transform.position.y,
                 transform.position.z
             );
             hit = Physics.CheckBox(randomPosition, targetSize / 2);
